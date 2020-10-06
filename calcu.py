@@ -38,10 +38,89 @@ def dig():
             dig_list.append(y)
             i += 1                 
     return dig_list            
-            
-            
+          
+
+def suma():
+    digit = dig()
+    res = 0
+    for e in digit:
+        res += e
+    return res
+
+def resta():
+    digit = dig()
+    res = digit[0]
+    i = 0
+    
+    while i < len(digit):
+        if i == 0:
+            i += 1
+        else:
+            res -= digit[i]
+            i += 1    
+    return res
+
+def mult():
+    
+    digit = dig()
+    res = 1
+    for e in digit:
+        res *= e
+    return res
+
+def divi():
+    digit = dig()
+    res = digit[0]
+    i = 0
+    
+    while i < len(digit):
+        if i == 0:
+            i += 1
+        else:
+            res /= digit[i]
+            i += 1    
+    return int(res)
+    
+def pot():
+    print("Si quiere que la operacion solo tenga 1 exponente ")
+    print("elija solo 2 digitos, los digitos ingresados despues ")
+    print("del primero seran exponentes entre ellos")
+    
+    digit = dig()
+    res = digit[0]
+    i = 0
+    
+    while i < len(digit):
+        if i == 0:
+            i += 1
+        else:
+            res **= digit[i]
+            i += 1    
+    return res
+       
+def rc():
+    print("Si quiere que la operacion solo tenga 1 radical ")
+    print("elija solo 2 digitos, los digitos ingresados despues ")
+    print("del primero seran radicales entre ellos")
+    
+    digit = dig()
+    res = digit[0]
+    i = 0
+    
+    while i < len(digit):
+        if i == 0:
+            i += 1
+        else:
+            res **= 1/digit[i]
+            i += 1    
+    return int(res)
     
     
+    
+     
+            
+print(rc())    
+  
 
 def cal(c): 
     if c <=7:
@@ -69,4 +148,4 @@ def cal(c):
         return cal(w)           
     return print(z)
 
-print(dig())
+#print(dig())
