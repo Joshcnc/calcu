@@ -1,15 +1,5 @@
 
-def principal():
-    print("Elija la operacion a realizar")
-    print("1.Suma")
-    print("2.Resta")
-    print("3.Multiplicacion")
-    print("4.Division")
-    print("5.Potencia o exponente")
-    print("6.Raiz")
-    ### print("7.Deteccion de propiedad") ###  esto se hara ejecutable en futuras versiones
-    c = int(input("la operacion se elije insertando el numero que le corresponde "))
-    
+
 
 def dig():
     i = 1
@@ -119,28 +109,25 @@ def rc():
     
      
             
-print(rc())    
+print("W.I.P")    
   
 
 def cal(c): 
     if c <=7:
-        x = int(input("ingrese el primer digito "))
-        y = int(input("ingrese el segundo digito "))
-        
-    if c == 1 :
-        z = x + y
-    elif c == 2 :
-        z = x - y 
-    elif c == 3 :
-        z = x * y
-    elif c == 4 :
-        z = x / y
-    elif c == 5:
-        z = x ** y
-    elif c == 6:
-        z =  int( x ** (1/y) ) 
-    elif c == 7:
-        return
+        if c == 1 :
+            return suma()
+        elif c == 2 :
+            return resta() 
+        elif c == 3 :
+            return mult()
+        elif c == 4 :
+            return divi()
+        elif c == 5:
+            return pot()
+        elif c == 6:
+            return rc() 
+        elif c == 7:
+            return
 
     else :
         print("el numero ingresado no es valido, por favor ingrese un numero entre el 1 y el 6")
@@ -148,4 +135,17 @@ def cal(c):
         return cal(w)           
     return print(z)
 
-#print(dig())
+def principal():
+    print("Elija la operacion a realizar")
+    print("1.Suma")
+    print("2.Resta")
+    print("3.Multiplicacion")
+    print("4.Division")
+    print("5.Potencia o exponente")
+    print("6.Raiz")
+    ### print("7.Deteccion de propiedad") ###  esto se hara ejecutable en futuras versiones
+    c = int(input("la operacion se elije insertando el numero que le corresponde "))
+    print (cal(c))
+
+
+principal()
